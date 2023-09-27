@@ -1,7 +1,8 @@
 # Boolean in SESS
 
 ## Overview
-
+Due to the molding scene, endoscope scene, and physical scene, three sets of models with similar shapes but different vertices, triangles and coordinate axes are used, and there is no base coordinate system on the hardware, each base coordinate is the simulated bone origin after calibration, and there are errors such as assembly jitter. And we have to do two Boolean operations of different algorithms at the same time, and calculate some extra things to communicate between the game engine and the physics engine. So here's the calculation.
+For now, Unity will do most of the computing. But I think this is not a good solution, although the calculation is not difficult, but too cumbersome, if you do not have to document the step by step down, later generations to see the code may be difficult to understand why so many matrix operations.
 ## Algorithm
 First,we should know that because of there's no base-axis in reality,the origin coordinate of the optics is the bone origin and 
 will be changed after every calibration.
