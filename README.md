@@ -119,3 +119,31 @@ T4 = Matrix4x4.Translate(resultTransform)*T2.localToWorldMatrix;
 `Boolean.prefab` `Body_CC.prefab`
 
 
+### DetectProne.cs
+
+In this script,we calculate the **T1**
+
+### DataLake.cs
+
+DataLake contains data that needs to be persisted during Boolean processes
+
+In branch `feature-new-boolean`,only have a bit of data.
+We should refer to branch `Dev-Merge-Multi-Boolean`.
+
+### InitCppBooleanData.cs
+
+I directly copied this script of the branch `Dev-Merge-Multi-Boolean`, and it has not modified the bug, which needs to be modified.
+
+### PhysicalCommon.cs
+
+branch `Dev-Merge-Multi-Boolean` is the full edition,but we need to modify some function to fit the new algorithm.
+
+### ReceiveMeshFromBoolean.cs
+
+In JX scene,receive the bone mesh from CX.
+
+A lot of methods need to be modified here, starting with the difference between single Boolean and multiple Boolean. And then because we tweaked the algorithm. So you should get rid of a lot of unnecessary calculations here.
+
+### TrepanBoolean.cs
+
+C# boolean.A lot of code needed bo be modified.
